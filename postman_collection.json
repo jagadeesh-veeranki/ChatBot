@@ -1,0 +1,170 @@
+{
+    "info": {
+        "_postman_id": "b3a5d8f9-4b2c-4f1e-8e3d-7a9c8b0c5d2e",
+        "name": "AI Chatbot API",
+        "description": "API Collection for Phase 5 of the AI Chatbot project.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Health Check",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/api/health",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "health"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "List Intents",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/api/intents",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "intents"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Chat (Greeting)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"message\": \"Hello\",\n    \"session_id\": \"test_user_1\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/api/chat",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "chat"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Chat (Context - Weather)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"message\": \"Check weather\",\n    \"session_id\": \"test_user_1\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/api/chat",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "chat"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Chat (Context - City Input)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"message\": \"London\",\n    \"session_id\": \"test_user_1\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/api/chat",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "chat"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Reset Session",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"session_id\": \"test_user_1\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/api/reset",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "api",
+                        "reset"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

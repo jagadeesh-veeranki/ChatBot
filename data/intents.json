@@ -1,0 +1,135 @@
+[
+    {
+        "tag": "greeting",
+        "patterns": [
+            "Hi",
+            "Hello",
+            "Hey",
+            "Good morning",
+            "What's up",
+            "How are you",
+            "Is anyone there?",
+            "Greetings",
+            "Yo"
+        ],
+        "responses": [
+            "Hello there! How can I help you?",
+            "Hi! Ready to assist.",
+            "Greetings! What's on your mind?"
+        ]
+    },
+    {
+        "tag": "farewell",
+        "patterns": [
+            "Bye",
+            "See you later",
+            "Goodbye",
+            "I'm leaving",
+            "Have a good day",
+            "Ciao",
+            "Exit",
+            "Quit"
+        ],
+        "responses": [
+            "Goodbye! Come back soon.",
+            "See you later!",
+            "Have a great day!"
+        ]
+    },
+    {
+        "tag": "thanks",
+        "patterns": [
+            "Thanks",
+            "Thank you",
+            "That's helpful",
+            "Appreciate it",
+            "Thanks a lot"
+        ],
+        "responses": [
+            "You're welcome!",
+            "Happy to help!",
+            "Anytime!"
+        ]
+    },
+    {
+        "tag": "about",
+        "patterns": [
+            "Who are you?",
+            "What are you?",
+            "Are you a bot?",
+            "Tell me about yourself",
+            "What is your name?"
+        ],
+        "responses": [
+            "I am the AI Chatbot v4, able to hold context-aware conversations."
+        ]
+    },
+    {
+        "tag": "weather",
+        "patterns": [
+            "What's the weather like?",
+            "Is it raining?",
+            "Weather forecast",
+            "Check weather",
+            "Do I need an umbrella?"
+        ],
+        "responses": [
+            "I can help with that. Which city are you in?"
+        ],
+        "context_set": "awaiting_city"
+    },
+    {
+        "tag": "city_input",
+        "patterns": [
+            "London",
+            "New York",
+            "Paris",
+            "Tokyo",
+            "Hyderabad",
+            "San Francisco",
+            "Berlin"
+        ],
+        "responses": [
+            "Checking weather... (This is a placeholder, API coming later)"
+        ],
+        "context_filter": "awaiting_city"
+    },
+    {
+        "tag": "help",
+        "patterns": [
+            "I need help",
+            "Can you help me?",
+            "What can you do?",
+            "Help please",
+            "Support"
+        ],
+        "responses": [
+            "I can answer questions, chat with you, and help you learn about chatbots. Just ask!"
+        ]
+    },
+    {
+        "tag": "technical",
+        "patterns": [
+            "What is NLP?",
+            "Explain machine learning",
+            "How does this bot work?",
+            "What is artificial intelligence?",
+            "Define tokenization"
+        ],
+        "responses": [
+            "I use Natural Language Processing (NLP) and Machine Learning (Naive Bayes) to understand your intent!"
+        ]
+    },
+    {
+        "tag": "error",
+        "patterns": [
+            "I don't understand",
+            "That made no sense",
+            "What?",
+            "Confused"
+        ],
+        "responses": [
+            "Sorry about that! I'm still learning. Could you say it differently?"
+        ]
+    }
+]
