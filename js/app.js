@@ -152,7 +152,15 @@ class App {
             }
         } catch (error) {
             this.ui.hideTyping();
-            this.ui.addMessage(`⚠️ **Error:** ${error.message}. Please check if the backend is running.`, 'bot');
+            let errorMsg = "I'm having trouble connecting to the server.";
+
+            if (error.message.includes("Failed to fetch")) {
+                errorMsg = "⚠️ **Network Error:** Cannot reach the backend. Is the server running?";
+            } else {
+                errorMsg = `⚠️ **Error:** ${error.message}`;
+            }
+
+            this.ui.addMessage(errorMsg, 'bot');
         }
     }
 
